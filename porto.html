@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/porto.css" />
+  </head>
+
+  <body>
+    <nav>
+      <!-- nav tablet ke atas -->
+      <ul id="nav-tablet">
+        <li><a href="index.html">Home</a></li>
+        <li><a href>Product</a></li>
+        <li><a href>Galery</a></li>
+        <li><a href>Blog</a></li>
+        <li><a href>Inventory</a></li>
+      </ul>
+
+      <!-- nav mobile ke bawah -->
+      <button id="nav-mobile">Menu</button>
+    </nav>
+
+    <div class="content ">
+      <div class="profile">
+        <div class="left dark">
+          <img src="Assets/user.jpeg" />
+          <div class="name-group">
+            <div class="name-work">
+              <p id="nama-gd">Farhan Adhyasta</p>
+              <p id="work-gd">Front End Designer</p>
+            </div>
+            <div class="btn-container">
+              <button class="btn-left">Kontak</button>
+              <button class="btn-right">Resume</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="right dark">
+          <div class="right-title">
+            <p>Nama</p>
+            <p>Role</p>
+            <p>Availability</p>
+            <p>Usia</p>
+            <p>Lokasi</p>
+            <p>Pengalaman</p>
+            <p>Email</p>
+          </div>
+          <div>
+            <p id ="nama">Farhan Adhyasta</p>
+            <p id ="pekerjaan">Front End Designer</p>
+            <p id ="availability">Full Time</p>
+            <p id ="age">17</p>
+            <p id ="state">jakarta, Indonesia</p>
+            <p id ="experience">2</p>
+            <p id ="email">Developer@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- form -->
+      <form onsubmit="submitForm()">
+        <div class="form-text">
+          <div>
+            <label for="masukkan nama anda">Nama</label>
+            <input type="text" name="nama" id="input-nama" placeholder="masukkan nama anda" />
+          </div>
+  
+          <div>
+            <label for="Masukan role" > Role</label>
+            <input type="text" id="input-pekerjaan" />
+          </div>
+  
+          <div>
+            <label for=" Masukan Availability" > Availability</label>
+            <input type="text" id="input-availability" />
+          </div>
+  
+          <div>
+            <label for="Masukan Usia" > Usia</label>
+            <input type="text" id="input-age" />
+          </div>
+  
+          <div>
+            <label for="Lokasi" > Lokasi</label>
+            <input type="text" id="input-state" />
+          </div>
+  
+          <div>
+            <label for="Years Experience" > Years Experience</label>
+            <input type="text" id="input-experience" />
+          </div>
+  
+          <div>
+            <label for="Email"> Email</label>
+            <input type="text"  id="input-email" />
+          </div>
+        </div>
+        
+
+        <button type="submit" id="btn-sub" onclick="return confirm('yakin dek')" >Submit</button>
+      </form>
+    </div>
+
+    <script>
+      function submitForm(){
+        event.preventDefault();
+
+      const inputName = document.getElementById("input-nama").value;
+      document.getElementById("nama").innerText = inputName;
+
+      const inputNamegd = document.getElementById("input-nama").value;
+      document.getElementById("nama-gd").innerText = inputNamegd;
+
+      const inputWorkgd = document.getElementById("input-pekerjaan").value;
+      document.getElementById("work-gd").innerText = inputWorkgd;
+      
+      const inputRole = document.getElementById("input-pekerjaan").value;
+      document.getElementById("pekerjaan").innerText = inputRole;
+
+      const inputAvailability = document.getElementById("input-availability").value;
+      document.getElementById("availability").innerText = inputAvailability;
+
+      const inputAge = document.getElementById("input-age").value;
+      document.getElementById("age").innerText = inputAge;
+
+      const inputState = document.getElementById("input-state").value;
+      document.getElementById("state").innerText = inputState;
+
+      const inputExperience= document.getElementById("input-experience").value;
+      document.getElementById("experience").innerText = inputExperience;
+
+      const inputEmail = document.getElementById("input-email").value;
+      document.getElementById("email").innerText = inputEmail;
+
+      
+
+      console.log(inputRole)
+      }
+    </script>
+  </body>
+</html>
